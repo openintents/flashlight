@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- ***************************
+	     About information
+	     *************************** -->
+	     
+	<!-- Automatically filled in by Launchpad: -->
+	<string name="about_translators">Launchpad Contributions:
+  Abdessamad Derraz https://launchpad.net/~derraz
+  Thibault Févry https://launchpad.net/~thibaultfevry</string>
+	
+	<!-- Strings for OI About -->
+	<string name="about_comments">OpenIntents Flashlight vous aide à trouver votre chemin dans le noir. La lumière d\'affichage arrière reste allumée tant que l\'application est en marche.</string>
+	<string name="about_website_label">OI Flashlight à OpenIntents</string>
+	
+	<!-- ***************************
+	     Applicatio-specific strings
+	     *************************** -->
+    <string name="app_name">OI Flashlight</string>
+    
+    <string name="flashlight_info">Le rétro-éclairage est activé.</string>
+    
+    
+    <string name="color">Couleur</string>
+    <string name="color_picker">Sélecteur de couleur</string>
+    
+    
+    <string name="preferences">Préférences</string>
+    
+	<!-- ***************************
+	     Distribution
+	     *************************** -->
+	
+	
+    <string name="download_color_picker">Download Color Picker</string>
+    <string name="color_picker_modularization_explanation">To make the Color Picker more useful to other developers, we have split it into its own app.  Please download it now from the Market or the OpenIntents website.</string>
+    <string name="download_color_picker_market">Market download</string>
+    <string name="download_color_picker_web">Web download</string>
+	
+	
+	
+	<!-- EULA -->
+	<string name="eula_title">OI Flashlight EULA</string>
+	<string name="eula_accept">Accepter</string>
+	<string name="eula_refuse">Quitter</string>
+	
+	<!-- Update -->
+	<string name="update_box_text">S\'il vous plaît vérifier manuellement les mises à jour ou installer OI Update pour avoir des notifications automatique. Version actuelle: %s</string>
+	<string name="update_check_now">Vérifier maintenant.</string>
+	<string name="update_get_updater">Obtenir OI Updater.</string>
+	<string name="update_error">Télécharger l\'application indisponible.</string>
+	<string name="update">Vérifier les mises à jour</string>
+	
+	<!-- About -->
+	<string name="about">À propos de</string>
+	<string name="aboutapp_not_available">Version %s\n\n Aucune extension disponible pour afficher toutes les infos (contact, credits, license).</string>
+	<string name="aboutapp_get">Obtenir OI About</string>
+	
+	<!-- ***************************
+	     Preferences
+	     *************************** -->
+	
+	<string name="settings_titlebar">Préférences</string>
+	<string name="settings_title_keep_color">Garder la couleur</string>
+	<string name="settings_summary_keep_color">Sauver la couleur pour le prochain démarrage de l\'application Flashlight</string>
+</resources>

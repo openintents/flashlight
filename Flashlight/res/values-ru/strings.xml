@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- ***************************
+	     About information
+	     *************************** -->
+	     
+	<!-- Automatically filled in by Launchpad: -->
+	<string name="about_translators">Launchpad Contributions:
+  Artur https://launchpad.net/~arturyak
+  Peli https://launchpad.net/~peli0101
+  Vasily Bogantsev https://launchpad.net/~bas-eurogym</string>
+	
+	<!-- Strings for OI About -->
+	<string name="about_comments">OpenIntents Flashlight поможет Вам найти дорогу в темноте. Пока запущено приложение - подсветка экрана остается включенной.</string>
+	<string name="about_website_label">OI Flashlight на OpenIntents</string>
+	
+	<!-- ***************************
+	     Applicatio-specific strings
+	     *************************** -->
+    <string name="app_name">OI Flashlight</string>
+    
+    <string name="flashlight_info">Подсветка остаётся включённой.</string>
+    
+    
+    <string name="color">Цвет</string>
+    <string name="color_picker">Выбор цвета</string>
+    
+    
+    <string name="preferences">Настройки</string>
+    
+	<!-- ***************************
+	     Distribution
+	     *************************** -->
+	
+	
+    <string name="download_color_picker">Download Color Picker</string>
+    <string name="color_picker_modularization_explanation">To make the Color Picker more useful to other developers, we have split it into its own app.  Please download it now from the Market or the OpenIntents website.</string>
+    <string name="download_color_picker_market">Market download</string>
+    <string name="download_color_picker_web">Web download</string>
+	
+	
+	
+	<!-- EULA -->
+	<string name="eula_title">Лицензионное соглашение OI Flashlight</string>
+	<string name="eula_accept">Принять</string>
+	<string name="eula_refuse">Отменить</string>
+	
+	<!-- Update -->
+	<string name="update_box_text">Проверяйте обновления вручную или установите OI Update для автоматического уведомления. Текущая версия: %s</string>
+	<string name="update_check_now">Проверить сейчас</string>
+	<string name="update_get_updater">Установить OI Updater.</string>
+	<string name="update_error">Приложение загрузчик отсутствует.</string>
+	<string name="update">Проверить обновления</string>
+	
+	<!-- About -->
+	<string name="about">О программе</string>
+	<string name="aboutapp_not_available">Версия %s\n\n Отсутствует совместимое расширение для отображения полной информации (контакты, авторы, лицензия).</string>
+	<string name="aboutapp_get">Установить OI About</string>
+	
+	<!-- ***************************
+	     Preferences
+	     *************************** -->
+	
+	<string name="settings_titlebar">Настройки</string>
+	<string name="settings_title_keep_color">Сохранить цвет</string>
+	<string name="settings_summary_keep_color">Сохранить цвет для следующего запуска Flashlight</string>
+</resources>
