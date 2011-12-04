@@ -5,36 +5,34 @@
 	     *************************** -->
 	     
 	<!-- Automatically filled in by Launchpad: -->
-	<string name="about_translators">Launchpad Contributions:
-  OpenIntents devs https://launchpad.net/~openintents-devs
-  zhangchun https://launchpad.net/~zhangchun</string>
+	<string name="about_translators">translator-credits</string>
 	
     <!-- Short explanation of the application -->
-	<string name="about_comments">OpenIntents手电筒帮助你在黑暗中寻找光明。运行开启屏背光。</string>
+	<string name="about_comments">OpenIntents Flashlight helps you find your way in the dark. The display backlight is kept turned on while this application is running.</string>
 	
 	<!-- ***************************
 	     Applicatio-specific strings
 	     *************************** -->
 	<!-- Name of application. Can be localized. OI = OpenIntents should stay unmodified. -->
-    <string name="app_name">OI手电筒</string>
+    <string name="app_name">OI Flashlight</string>
     
-    <string name="backlight_info">开启背光屏。</string>
+    <string name="backlight_info">The backlight stays turned on.</string>
     
-    <string name="color">颜色</string>
+    <string name="color">Color</string>
     
     <!-- Application name should be consistent across translations. -->
-    <string name="color_picker">OI拾色器</string>
+    <string name="color_picker">OI Color Picker</string>
     
-    <string name="preferences">设置</string>
+    <string name="preferences">Preferences</string>
     
 	<!-- ***************************
 	     Preferences
 	     *************************** -->
 	
 	<!-- Title for preferences or settings -->
-	<string name="settings_titlebar">设置</string>
-	<string name="settings_title_keep_color">保持颜色</string>
-	<string name="settings_summary_keep_color">手电筒下次开启是保持一样的颜色。</string>
+	<string name="settings_titlebar">Preferences</string>
+	<string name="settings_title_keep_color">Keep color</string>
+	<string name="settings_summary_keep_color">Save color for next time Flashlight app is started</string>
 	
 	<!-- ***************************
 	     Distribution
@@ -42,7 +40,7 @@
 	
 	<!-- Explanation that is displayed if Color Picker has not been installed yet, but 
 		user tries to access it. -->
-    <string name="color_picker_modularization_explanation">使拾色器能应用于更多的开发者，我们已经分类好所有的应用程序。</string>
+    <string name="color_picker_modularization_explanation">To make the Color Picker more useful to other developers, we have split it into its own app.</string>
     <string name="setting_use_camera_flash">Use camera flash</string>
     <string name="setting_use_camera_flash_summary">Use the camera flash instead of the screen backlight.</string><!--  (Warning: Prolonged camera flash usage may damage it) -->
     <!-- Information to enable the camera flash as flashlight. -->
