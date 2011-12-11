@@ -5,16 +5,10 @@
 	     *************************** -->
 	     
 	<!-- Automatically filled in by Launchpad: -->
-	<string name="about_translators">Launchpad Contributions:
-  DiegoJ https://launchpad.net/~diegojromerolopez
-  Feder Sáiz https://launchpad.net/~federsaiz-deactivatedaccount
-  Julián Unrrein https://launchpad.net/~junrrein
-  Paco Molinero https://launchpad.net/~franciscomol
-  Walter Reindeer Martinez H https://launchpad.net/~waltereindeerm
-  enrigp https://launchpad.net/~enrgarc</string>
+	<string name="about_translators">translator-credits</string>
 	
     <!-- Short explanation of the application -->
-	<string name="about_comments">OpenIntents FlashLight te ayuda a encontrar tu camino en la oscuridad. La luz de fondo de la pantalla permanece encendida mientras la aplicación esté arrancada.</string>
+	<string name="about_comments">OpenIntents Flashlight helps you find your way in the dark. The display backlight is kept turned on while this application is running.</string>
 	
 	<!-- ***************************
 	     Applicatio-specific strings
@@ -22,23 +16,23 @@
 	<!-- Name of application. Can be localized. OI = OpenIntents should stay unmodified. -->
     <string name="app_name">OI Flashlight</string>
     
-    <string name="backlight_info">La luz posterior permanece encendida.</string>
+    <string name="backlight_info">The backlight stays turned on.</string>
     
     <string name="color">Color</string>
     
     <!-- Application name should be consistent across translations. -->
-    <string name="color_picker">Selector de color OI</string>
+    <string name="color_picker">OI Color Picker</string>
     
-    <string name="preferences">Preferencias</string>
+    <string name="preferences">Preferences</string>
     
 	<!-- ***************************
 	     Preferences
 	     *************************** -->
 	
 	<!-- Title for preferences or settings -->
-	<string name="settings_titlebar">Preferencias</string>
-	<string name="settings_title_keep_color">Mantener color</string>
-	<string name="settings_summary_keep_color">Salvar el color para la próxima vez que se inicie Flashlight</string>
+	<string name="settings_titlebar">Preferences</string>
+	<string name="settings_title_keep_color">Keep color</string>
+	<string name="settings_summary_keep_color">Save color for next time Flashlight app is started</string>
 	
 	<!-- ***************************
 	     Distribution
@@ -46,7 +40,7 @@
 	
 	<!-- Explanation that is displayed if Color Picker has not been installed yet, but 
 		user tries to access it. -->
-    <string name="color_picker_modularization_explanation">Para hacer el selector de color mas útil para otros desarrolladores, ha sido convertido en una aplicación separada.</string>
+    <string name="color_picker_modularization_explanation">To make the Color Picker more useful to other developers, we have split it into its own app.</string>
     <string name="setting_use_camera_flash">Use camera flash</string>
     <string name="setting_use_camera_flash_summary">Use the camera flash instead of the screen backlight.</string><!--  (Warning: Prolonged camera flash usage may damage it) -->
     <!-- Information to enable the camera flash as flashlight. -->
