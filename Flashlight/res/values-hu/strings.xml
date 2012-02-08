@@ -6,8 +6,7 @@
 	     
 	<!-- Automatically filled in by Launchpad: -->
 	<string name="about_translators">Launchpad Contributions:
-  OpenIntents devs https://launchpad.net/~openintents-devs
-  mrx5682 https://launchpad.net/~mrx5682</string>
+  Martin Bede https://launchpad.net/~bmartin9x</string>
 	
     <!-- Short explanation of the application (max. 80 characters) -->
 	<string name="about_comments">Keep the camera flash or the backlight turned on with OI Flashlight.</string>
@@ -16,25 +15,25 @@
 	     Applicatio-specific strings
 	     *************************** -->
 	<!-- Name of application. Can be localized. OI = OpenIntents should stay unmodified. -->
-    <string name="app_name">OI Flashlight</string>
+    <string name="app_name">OI Zseblámpa</string>
     
-    <string name="backlight_info">The backlight stays turned on.</string>
+    <string name="backlight_info">A háttérvilágítás bekapcsolva marad.</string>
     
-    <string name="color">Colour</string>
+    <string name="color">Szín</string>
     
     <!-- Application name should be consistent across translations. -->
-    <string name="color_picker">OI Colour Picker</string>
+    <string name="color_picker">OI Color Picker</string>
     
-    <string name="preferences">Preferences</string>
+    <string name="preferences">Beállítások</string>
     
 	<!-- ***************************
 	     Preferences
 	     *************************** -->
 	
 	<!-- Title for preferences or settings -->
-	<string name="settings_titlebar">Preferences</string>
-	<string name="settings_title_keep_color">Keep colour</string>
-	<string name="settings_summary_keep_color">Save colour for next time Flashlight app is started</string>
+	<string name="settings_titlebar">Beállítások</string>
+	<string name="settings_title_keep_color">Keep color</string>
+	<string name="settings_summary_keep_color">Save color for next time Flashlight app is started</string>
 	
 	<!-- ***************************
 	     Distribution
@@ -42,7 +41,7 @@
 	
 	<!-- Explanation that is displayed if Color Picker has not been installed yet, but 
 		user tries to access it. -->
-    <string name="color_picker_modularization_explanation">To make the Colour Picker more useful to other developers, we have split it into its own app.</string>
+    <string name="color_picker_modularization_explanation">To make the Color Picker more useful to other developers, we have split it into its own app.</string>
     <string name="setting_use_camera_flash">Use camera flash</string>
     <string name="setting_use_camera_flash_summary">Use the camera flash instead of the screen backlight.</string><!--  (Warning: Prolonged camera flash usage may damage it) -->
     <!-- Information to enable the camera flash as flashlight. -->
