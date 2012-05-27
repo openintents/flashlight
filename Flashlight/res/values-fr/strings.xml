@@ -9,10 +9,11 @@
   Abdessamad Derraz https://launchpad.net/~derraz
   Anges https://launchpad.net/~az24
   Peli https://launchpad.net/~peli0101
+  Tanguy Herrmann https://launchpad.net/~dolanor
   Thibault Févry https://launchpad.net/~thibaultfevry</string>
 	
     <!-- Short explanation of the application (max. 80 characters) -->
-	<string name="about_comments">Keep the camera flash or the backlight turned on with OI Flashlight.</string>
+	<string name="about_comments">OI Flashlight garde allumé le flash de la caméra ou le rétro-éclairage</string>
 	
 	<!-- ***************************
 	     Applicatio-specific strings
@@ -35,8 +36,6 @@
 	
 	<!-- Title for preferences or settings -->
 	<string name="settings_titlebar">Paramètres</string>
-	<string name="settings_title_keep_color">Garder la couleur</string>
-	<string name="settings_summary_keep_color">Sauver la couleur pour le prochain démarrage de l\'application Flashlight</string>
 	
 	<!-- ***************************
 	     Distribution
@@ -44,11 +43,19 @@
 	
 	<!-- Explanation that is displayed if Color Picker has not been installed yet, but 
 		user tries to access it. -->
-    <string name="color_picker_modularization_explanation">To make the Color Picker more useful to other developers, we have split it into its own app.</string>
-    <string name="setting_use_camera_flash">Use camera flash</string>
-    <string name="setting_use_camera_flash_summary">Use the camera flash instead of the screen backlight.</string><!--  (Warning: Prolonged camera flash usage may damage it) -->
+    <string name="color_picker_modularization_explanation">Pour rendre le sélectionneur de couleurs plus pratique aux autres développeurs, nous l\'avons séparé en une application à part.</string>
+    <string name="setting_use_camera_flash">Utiliser le flash de la caméra</string>
+    <string name="setting_use_camera_flash_summary">Utiliser le flash de la caméra au lieu du rétro-éclairage de l\'écran</string><!--  (Warning: Prolonged camera flash usage may damage it) -->
     <!-- Information to enable the camera flash as flashlight. -->
-    <string name="cameralight_info">Press to enable camera light (May take a second).</string>
-    <string name="cameralight_stop_info">Press to disable camera light.</string>
+    <string name="cameralight_info">Appuyer pour activer le flash de la caméra (peut prendre 1 seconde).</string>
+    <string name="cameralight_stop_info">Appuyer pour désactiver le flash de la caméra</string>
+    <string name="settings_color_options">Choose Color Options</string>
+    <string name="settings_color_options_summary">Choose either to remember color or to display random colors</string>
+    <string name="settings_color_options_dialog_title">Choose Color Options</string>
+    <string-array name="settings_color_options_entries">
+        <item>Keep Color</item>
+        <item>Random Color</item>
+        <item>White</item>
+    </string-array>
     
 </resources>

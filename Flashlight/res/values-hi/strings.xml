@@ -34,8 +34,6 @@
 	
 	<!-- Title for preferences or settings -->
 	<string name="settings_titlebar">प्राथमिकताएं</string>
-	<string name="settings_title_keep_color">रंग रखें</string>
-	<string name="settings_summary_keep_color">इसी रंग को अगली बार टॉर्च अनुप्रयोग में परयोग करने के लिए रंग सुरक्षित कर लें</string>
 	
 	<!-- ***************************
 	     Distribution
@@ -49,5 +47,13 @@
     <!-- Information to enable the camera flash as flashlight. -->
     <string name="cameralight_info">कैमरे के प्रकाश को सक्षम करने के लिए दबाएँ (थोडा वक्त ले सकता है)|</string>
     <string name="cameralight_stop_info">कैमरे के प्रकाश को अक्षम करने के लिए दबाएँ</string>
+    <string name="settings_color_options">Choose Color Options</string>
+    <string name="settings_color_options_summary">Choose either to remember color or to display random colors</string>
+    <string name="settings_color_options_dialog_title">Choose Color Options</string>
+    <string-array name="settings_color_options_entries">
+        <item>Keep Color</item>
+        <item>Random Color</item>
+        <item>White</item>
+    </string-array>
     
 </resources>

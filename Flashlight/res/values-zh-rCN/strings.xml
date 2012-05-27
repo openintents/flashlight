@@ -34,8 +34,6 @@
 	
 	<!-- Title for preferences or settings -->
 	<string name="settings_titlebar">选项</string>
-	<string name="settings_title_keep_color">保持颜色</string>
-	<string name="settings_summary_keep_color">手电筒下次开启时保持一样的颜色。</string>
 	
 	<!-- ***************************
 	     Distribution
@@ -49,5 +47,13 @@
     <!-- Information to enable the camera flash as flashlight. -->
     <string name="cameralight_info">点击开启相机闪光灯（可能要一秒钟）</string>
     <string name="cameralight_stop_info">点击关闭相机闪光灯</string>
+    <string name="settings_color_options">Choose Color Options</string>
+    <string name="settings_color_options_summary">Choose either to remember color or to display random colors</string>
+    <string name="settings_color_options_dialog_title">Choose Color Options</string>
+    <string-array name="settings_color_options_entries">
+        <item>Keep Color</item>
+        <item>Random Color</item>
+        <item>White</item>
+    </string-array>
     
 </resources>

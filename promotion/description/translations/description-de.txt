@@ -18,7 +18,7 @@ http://www.openintents.org
 Sie können uns mit der Verbesserung der Übersetzung in ihre Sprache auf Launchpad unterstützen: 
 https://translations.launchpad.net/openintents/trunk
 
-Eigentschaften: 
+Leistungsmerkmale: 
 * Schaltet die Hintergrundbeleuchtung an.
 * Schaltet den Kamerablitz an.
 * Die Farbe der Hintergrundbeleuchtung ist veränderbar.

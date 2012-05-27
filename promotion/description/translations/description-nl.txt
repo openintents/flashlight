@@ -2,10 +2,10 @@
 OI Zaklamp
 
 # Promo text:
-Keep the camera flash or the backlight turned on with OI Flashlight.
+Laat de flitser van je camera of het backlight van je scherm aan met OI Flashlight.
 
 # Description:
-OI Flashlight is a simple and effective application that helps you find a way in the dark. OI Flashlight locks the display backlight on, clearly illuminating the surrounding area. For devices with a camera flash, OI Flashlight can also use the flash as a bright torch to brighten the room. The color of the backlight is completely customizable with OI Color Picker. 
+OI Flashlight is een simpele, effectieve applicatie om te zien in het donker. OI Flashlight zet de backlight van je scherm aan en verlicht zo je omgeving. Als je toestel een flitser heeft, kan OI Flashlight je flitslamp gebruiken. Je kunt de backlight-kleur zelf kiezen met de OI Kleurkiezer. 
 
 Deze applicatie is advertentievrij, en heeft geen internet toegang nodig. 
 
@@ -19,26 +19,26 @@ Jij kan helpen om de vertaling in je eigen taal te verbeteren via Launchpad:
 https://translations.launchpad.net/openintents/trunk
 
 Eigenschappen: 
-* Lock the display backlight on.
-* Lock camera flash on.
-* The color of backlight is customizable.
+* Zet de backlight van het scherm aan.
+* Zet de flitser aan.
+* De backlight-kleur is aan te passen.
 
-Available extensions for "OI Flashlight": 
-* Show the license information with "OI About".
-* Change the color of the backlight with "OI Color Picker".
+Beschikbare extensies voor OI Flashlight 
+* Toon licentie-informatie met OI About
+* Stel de backlight-kleur met OI Kleurkiezer
 
-Applications that work with "OI Flashlight": 
-* Update with "OI Update".
+Apps die werken met OI Flashlight 
+* Updaten met OI Update
 
 Sleutelwoorden: 
-* Flashlight, light, Backlight
+* Flashlight, light, licht, backlight, zaklamp, zaklantaarn, lamp
 * OI, OpenIntents, Open Intents
 
 Internationale versies 
 Lanternă OI, Llanterna d'OI, OI フラッシュライト, OI 전등, OI Baterka, OI Blic, OI El feneri, OI Flashlight, OI Latarka, OI Luche, OI Lykt, OI Plaslayt, OI Taschenlampe, OI Torcia, OI Zaklamp, OI Zseblámpa, OI قول چىراغ, OI Φακός, OI Светилка, OI Фенерче, OI टॉर्च, OI手电筒, مصباح يدوي OI, פנס OI
 
 
-Search strings for Market: 
+Zoektekst voor Market: 
 * uses OI About
 * uses OI Color Picker
 * uses OI Update

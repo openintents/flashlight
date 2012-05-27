@@ -2,7 +2,7 @@
 OI Flashlight
 
 # Promo text:
-Keep the camera flash or the backlight turned on with OI Flashlight.
+OI Flashlight garde allumé le flash de la caméra ou le rétro-éclairage
 
 # Description:
 OI Flashlight est une application simple et efficace qui vous aide à trouver un chemin dans le noir. OI Flashlight verrouille le rétroéclairage de l'écran sur le, clairement éclairant la zone environnante. Pour les appareils avec un flash d'appareil photo, lampe de poche OI peut aussi utiliser le flash comme une torche lumineuse pour égayer la pièce. La couleur du rétroéclairage est entièrement personnalisable avec Color Picker OI. 

@@ -5,15 +5,11 @@
 	     *************************** -->
 	     
 	<!-- Automatically filled in by Launchpad: -->
-	<string name="about_translators">This is a dummy translation so that the credits are counted as translated.
-
-Launchpad Contributions:
-  OpenIntents devs https://launchpad.net/~openintents-devs
-  Peli https://launchpad.net/~peli0101
-  Sérgio Marques https://launchpad.net/~sergio+marques</string>
+	<string name="about_translators">Launchpad Contributions:
+  Carl Fredrik Sima https://launchpad.net/~cf-sima</string>
 	
     <!-- Short explanation of the application (max. 80 characters) -->
-	<string name="about_comments">Manter a luz da máquina fotográfica ou luz de fundo ligada com o OI Flashlight.</string>
+	<string name="about_comments">Håll kamerablixten eller bakgrundsbelysningen påslagen med hjälp av  OI Flashlight.</string>
 	
 	<!-- ***************************
 	     Applicatio-specific strings
@@ -21,21 +17,21 @@ Launchpad Contributions:
 	<!-- Name of application. Can be localized. OI = OpenIntents should stay unmodified. -->
     <string name="app_name">OI Flashlight</string>
     
-    <string name="backlight_info">A luz de fundo fica ligada.</string>
+    <string name="backlight_info">Bakgrundsbelysningen fortsätter vara påslagen.</string>
     
-    <string name="color">Cor</string>
+    <string name="color">Färg</string>
     
     <!-- Application name should be consistent across translations. -->
     <string name="color_picker">OI Color Picker</string>
     
-    <string name="preferences">Preferências</string>
+    <string name="preferences">Inställningar</string>
     
 	<!-- ***************************
 	     Preferences
 	     *************************** -->
 	
 	<!-- Title for preferences or settings -->
-	<string name="settings_titlebar">Preferências</string>
+	<string name="settings_titlebar">Inställningar</string>
 	
 	<!-- ***************************
 	     Distribution
@@ -43,12 +39,12 @@ Launchpad Contributions:
 	
 	<!-- Explanation that is displayed if Color Picker has not been installed yet, but 
 		user tries to access it. -->
-    <string name="color_picker_modularization_explanation">Para que o Color Picker seja mais útil ao programadores, separámos a aplicação em duas.</string>
-    <string name="setting_use_camera_flash">Utilizar flash da máquina fotográfica</string>
-    <string name="setting_use_camera_flash_summary">Utilizar flash da máquina fotográfica em vez da luz de fundo.</string><!--  (Warning: Prolonged camera flash usage may damage it) -->
+    <string name="color_picker_modularization_explanation">För att göra Color Picker mer användbart för andra utvecklare så har vi gjort funktionen till en egen applikation.</string>
+    <string name="setting_use_camera_flash">Använd kamerablixten</string>
+    <string name="setting_use_camera_flash_summary">Använd kamerablixten istället för bakgrundsbelysningen.</string><!--  (Warning: Prolonged camera flash usage may damage it) -->
     <!-- Information to enable the camera flash as flashlight. -->
-    <string name="cameralight_info">Prima para ativar o flash da máquina (pode levar um segundo).</string>
-    <string name="cameralight_stop_info">Prima para desativar o flash da máquina.</string>
+    <string name="cameralight_info">Tryck för att använda kamerablixten (Kan ta någon sekund tills den är igång)</string>
+    <string name="cameralight_stop_info">Tryck för att slå av kamerablixten.</string>
     <string name="settings_color_options">Choose Color Options</string>
     <string name="settings_color_options_summary">Choose either to remember color or to display random colors</string>
     <string name="settings_color_options_dialog_title">Choose Color Options</string>

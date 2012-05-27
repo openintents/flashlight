@@ -7,7 +7,8 @@
 	<!-- Automatically filled in by Launchpad: -->
 	<string name="about_translators">Launchpad Contributions:
   Neta Oren https://launchpad.net/~netao212
-  OpenIntents devs https://launchpad.net/~openintents-devs</string>
+  OpenIntents devs https://launchpad.net/~openintents-devs
+  Yaron https://launchpad.net/~sh-yaron</string>
 	
     <!-- Short explanation of the application (max. 80 characters) -->
 	<string name="about_comments">Keep the camera flash or the backlight turned on with OI Flashlight.</string>
@@ -33,8 +34,6 @@
 	
 	<!-- Title for preferences or settings -->
 	<string name="settings_titlebar">העדפות</string>
-	<string name="settings_title_keep_color">שמור צבע</string>
-	<string name="settings_summary_keep_color">שמור צבע לפעם הבאה שיישום פנס יפתח</string>
 	
 	<!-- ***************************
 	     Distribution
@@ -48,5 +47,13 @@
     <!-- Information to enable the camera flash as flashlight. -->
     <string name="cameralight_info">לחץ כדי לאפשר אור מצלמה (יכול לקחת שנייה).</string>
     <string name="cameralight_stop_info">לחץ כדי לבטל אור מצלמה.</string>
+    <string name="settings_color_options">Choose Color Options</string>
+    <string name="settings_color_options_summary">Choose either to remember color or to display random colors</string>
+    <string name="settings_color_options_dialog_title">Choose Color Options</string>
+    <string-array name="settings_color_options_entries">
+        <item>Keep Color</item>
+        <item>Random Color</item>
+        <item>White</item>
+    </string-array>
     
 </resources>

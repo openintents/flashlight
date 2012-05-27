@@ -34,8 +34,6 @@
 	
 	<!-- Title for preferences or settings -->
 	<string name="settings_titlebar">Předvolby</string>
-	<string name="settings_title_keep_color">Zachovat barvu</string>
-	<string name="settings_summary_keep_color">Uložit barvu pro příště, až bude OI Baterka zapnuta.</string>
 	
 	<!-- ***************************
 	     Distribution
@@ -49,5 +47,13 @@
     <!-- Information to enable the camera flash as flashlight. -->
     <string name="cameralight_info">Stiskněte pro povolení diody fotoaparátu (může chvíli trvat).</string>
     <string name="cameralight_stop_info">Stiskněte pro zakázání diody fotoaparátu.</string>
+    <string name="settings_color_options">Choose Color Options</string>
+    <string name="settings_color_options_summary">Choose either to remember color or to display random colors</string>
+    <string name="settings_color_options_dialog_title">Choose Color Options</string>
+    <string-array name="settings_color_options_entries">
+        <item>Keep Color</item>
+        <item>Random Color</item>
+        <item>White</item>
+    </string-array>
     
 </resources>

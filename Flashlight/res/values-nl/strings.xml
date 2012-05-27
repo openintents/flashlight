@@ -7,10 +7,11 @@
 	<!-- Automatically filled in by Launchpad: -->
 	<string name="about_translators">Launchpad Contributions:
   Henk van der Velden https://launchpad.net/~henkvandervelden86
+  Maarten de Vries https://launchpad.net/~maarten-k-de-vries
   Peli https://launchpad.net/~peli0101</string>
 	
     <!-- Short explanation of the application (max. 80 characters) -->
-	<string name="about_comments">Keep the camera flash or the backlight turned on with OI Flashlight.</string>
+	<string name="about_comments">Laat de flitser van je camera of het backlight van je scherm aan met OI Flashlight.</string>
 	
 	<!-- ***************************
 	     Applicatio-specific strings
@@ -33,8 +34,6 @@
 	
 	<!-- Title for preferences or settings -->
 	<string name="settings_titlebar">Instellingen</string>
-	<string name="settings_title_keep_color">Bewaar kleur</string>
-	<string name="settings_summary_keep_color">Sla de kleur op voor de volgende keer de Flashlight-toepassing wordt opgestart</string>
 	
 	<!-- ***************************
 	     Distribution
@@ -43,10 +42,18 @@
 	<!-- Explanation that is displayed if Color Picker has not been installed yet, but 
 		user tries to access it. -->
     <string name="color_picker_modularization_explanation">Om de kleurenkiezer bruikbaar te maken voor andere ontwikkelaars, hebben we onze eigen applicatie opgesplitst.</string>
-    <string name="setting_use_camera_flash">Use camera flash</string>
-    <string name="setting_use_camera_flash_summary">Use the camera flash instead of the screen backlight.</string><!--  (Warning: Prolonged camera flash usage may damage it) -->
+    <string name="setting_use_camera_flash">Flitser van de camera gebruiken</string>
+    <string name="setting_use_camera_flash_summary">Flitser van de camera gebruiken in plaats van backlight scherm</string><!--  (Warning: Prolonged camera flash usage may damage it) -->
     <!-- Information to enable the camera flash as flashlight. -->
-    <string name="cameralight_info">Press to enable camera light (May take a second).</string>
-    <string name="cameralight_stop_info">Press to disable camera light.</string>
+    <string name="cameralight_info">Drukken om flitser in te schakelen (kan even duren).</string>
+    <string name="cameralight_stop_info">Drukken om flitser uit te schakelen.</string>
+    <string name="settings_color_options">Choose Color Options</string>
+    <string name="settings_color_options_summary">Choose either to remember color or to display random colors</string>
+    <string name="settings_color_options_dialog_title">Choose Color Options</string>
+    <string-array name="settings_color_options_entries">
+        <item>Keep Color</item>
+        <item>Random Color</item>
+        <item>White</item>
+    </string-array>
     
 </resources>
