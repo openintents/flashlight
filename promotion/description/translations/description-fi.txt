@@ -1,14 +1,21 @@
+# Application:
+OI Taskulamppu
+
+# Promo text:
+Pitää kameran salaman tai taustavalaistuksen päällä OI Taskulampun ollessa päällä.
+
+# Description:
 OI Flashlight is a simple and effective application that helps you find a way in the dark. OI Flashlight locks the display backlight on, clearly illuminating the surrounding area. For devices with a camera flash, OI Flashlight can also use the flash as a bright torch to brighten the room. The color of the backlight is completely customizable with OI Color Picker. 
 
-Tämä sovellus on mainos ilmainen eikä vaadi internet lupaa. 
+Tässä ohjelmassa EI OLE mainoksia ja ei vaadi internetyhteyttä ja -lupaa. 
 
-Lähdekoodi tämän ilmaisen ja avoimen lähdekoodin sovellus on saatavilla osoitteessa: 
+Tämän ilmaisen ja avoimen lähdekoodin ohjelman lähdekoodi on saatavilla osoitteesta: 
 http://code.google.com/p/openintents
 
-Täydellinen luettelo muutoksista ja luettelo usein kysyttyihin kysymyksiin osoitteessa: 
+Täydellinen luettelo muutoksista ja lista usein kysytyistä kysymyksistä on saatavilla osoitteessa: 
 http://www.openintents.org
 
-Voit auttaa parantamaan käännös omalla kielelläsi Launchpad: 
+Voit auttaa parantamaan käännöksiä omalle kielellesi Launchpadissa: 
 https://translations.launchpad.net/openintents/trunk
 
 Ominaisuudet: 
@@ -28,7 +35,7 @@ Avainsanat:
 * OI, OpenIntents, Open Intents
 
 Kansainvälinen versiot: 
-Lanternă OI, Llanterna d'OI, OI フラッシュライト, OI 전등, OI Baterka, OI Blic, OI El feneri, OI Flashlight, OI Latarka, OI Luche, OI Lykt, OI Plaslayt, OI Taschenlampe, OI Torcia, OI Zaklamp, OI Zseblámpa, OI قول چىراغ, OI Φακός, OI Светилка, OI Фенерче, OI टॉर्च, OI手电筒, مصباح يدوي OI, פנס OI
+Lanternă OI, Llanterna d'OI, OI Baterka, OI Blic, OI El feneri, OI Flashlight, OI Latarka, OI Luche, OI Lykt, OI Plaslayt, OI Taschenlampe, OI Taskulamppu, OI Torcia, OI Zaklamp, OI Zseblámpa, OI Φακός, OI Светилка, OI Фенерче, OI قول چىراغ, OI टॉर्च, OI フラッシュライト, OI 전등, OI手电筒, פנס OI, مصباح يدوي OI
 
 
 Etsintä jousille Markkinoiden: 

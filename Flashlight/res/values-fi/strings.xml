@@ -6,36 +6,32 @@
 	     
 	<!-- Automatically filled in by Launchpad: -->
 	<string name="about_translators">Launchpad Contributions:
-  Bert de Bruijn https://launchpad.net/~lpdebruijn
-  Henk van der Velden https://launchpad.net/~henkvandervelden86
-  Maarten de Vries https://launchpad.net/~maarten-k-de-vries
-  Peli https://launchpad.net/~peli0101
-  pjv https://launchpad.net/~pjv</string>
+  emp https://launchpad.net/~emp500</string>
 	
     <!-- Short explanation of the application (max. 80 characters) -->
-	<string name="about_comments">Laat de flitser van je camera of het backlight van je scherm aan met OI Flashlight.</string>
+	<string name="about_comments">Pitää kameran salaman tai taustavalaistuksen päällä OI Taskulampun ollessa päällä.</string>
 	
 	<!-- ***************************
 	     Applicatio-specific strings
 	     *************************** -->
 	<!-- Name of application. Can be localized. OI = OpenIntents should stay unmodified. -->
-    <string name="app_name">OI Zaklamp</string>
+    <string name="app_name">OI Taskulamppu</string>
     
-    <string name="backlight_info">De achtergrondverlichting blijft aan.</string>
+    <string name="backlight_info">Taustavalo pysyy päällä.</string>
     
-    <string name="color">Kleur</string>
+    <string name="color">Väri</string>
     
     <!-- Application name should be consistent across translations. -->
-    <string name="color_picker">OI Kleurenkiezer</string>
+    <string name="color_picker">OI Värinvalitsin</string>
     
-    <string name="preferences">Instellingen</string>
+    <string name="preferences">Asetukset</string>
     
 	<!-- ***************************
 	     Preferences
 	     *************************** -->
 	
 	<!-- Title for preferences or settings -->
-	<string name="settings_titlebar">Instellingen</string>
+	<string name="settings_titlebar">Asetukset</string>
 	
 	<!-- ***************************
 	     Distribution
@@ -43,12 +39,12 @@
 	
 	<!-- Explanation that is displayed if Color Picker has not been installed yet, but 
 		user tries to access it. -->
-    <string name="color_picker_modularization_explanation">Om de kleurenkiezer bruikbaar te maken voor andere ontwikkelaars, hebben we onze eigen applicatie opgesplitst.</string>
-    <string name="setting_use_camera_flash">Flitser van de camera gebruiken</string>
-    <string name="setting_use_camera_flash_summary">Flitser van de camera gebruiken in plaats van backlight scherm</string><!--  (Warning: Prolonged camera flash usage may damage it) -->
+    <string name="color_picker_modularization_explanation">Jotta Värinvalitsin olisi hyödyllinen myös muille kehittäjille, me teimme siitä oman itsenäisen ohjelman.</string>
+    <string name="setting_use_camera_flash">Käytä kameran salamavaloa</string>
+    <string name="setting_use_camera_flash_summary">Käytä kameran salamavaloa näytön taustavalon sijasta.</string><!--  (Warning: Prolonged camera flash usage may damage it) -->
     <!-- Information to enable the camera flash as flashlight. -->
-    <string name="cameralight_info">Drukken om flitser in te schakelen (kan even duren).</string>
-    <string name="cameralight_stop_info">Drukken om flitser uit te schakelen.</string>
+    <string name="cameralight_info">Paina asettaaksesi kameran salamavalon päälle (voi kestää muutaman sekunnin)99</string>
+    <string name="cameralight_stop_info">Paina sulkeaksesi kameran salamavalo.</string>
     <string name="settings_color_options">Choose Color Options</string>
     <string name="settings_color_options_summary">Choose either to remember color or to display random colors</string>
     <string name="settings_color_options_dialog_title">Choose Color Options</string>

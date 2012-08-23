@@ -12,6 +12,7 @@
   OpenIntents devs https://launchpad.net/~openintents-devs
   Patrick Eigensatz https://launchpad.net/~p.eigensatz
   Peli https://launchpad.net/~peli0101
+  Stanley https://launchpad.net/~wurfkeks
   appricoo https://launchpad.net/~appricoo</string>
 	
     <!-- Short explanation of the application (max. 80 characters) -->
@@ -51,13 +52,13 @@
     <!-- Information to enable the camera flash as flashlight. -->
     <string name="cameralight_info">Klicken Sie, um das Kameralicht zu aktivieren. (Kann einige Sekunden dauern)</string>
     <string name="cameralight_stop_info">Klicken Sie, um das Kameralicht zu deaktivieren.</string>
-    <string name="settings_color_options">Choose Color Options</string>
-    <string name="settings_color_options_summary">Choose either to remember color or to display random colors</string>
-    <string name="settings_color_options_dialog_title">Choose Color Options</string>
+    <string name="settings_color_options">Farb-Optionen</string>
+    <string name="settings_color_options_summary">Wähle, ob die Farbe gespeichert oder eine zufällige angezeigt werden soll.</string>
+    <string name="settings_color_options_dialog_title">Farb-Optionen</string>
     <string-array name="settings_color_options_entries">
-        <item>Keep Color</item>
-        <item>Random Color</item>
-        <item>White</item>
+        <item>Farbe behalten</item>
+        <item>Zufällige Farbe</item>
+        <item>Weiß</item>
     </string-array>
     
 </resources>
