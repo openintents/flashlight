@@ -39,13 +39,18 @@ import android.preference.PreferenceManager;
 import android.support.v2.os.Build;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
+import android.widget.SeekBar;
+import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import java.util.Random;
 
 public class Flashlight extends DistributionLibraryActivity {
@@ -81,6 +86,7 @@ public class Flashlight extends DistributionLibraryActivity {
 	private static int mTimeout = 5000;
 
 	private Brightness mBrightness;
+	private SeekBar mSeekBar;
 
 	private static boolean mOldClassAvailable;
 	private static boolean mNewClassAvailable;
@@ -143,8 +149,9 @@ public class Flashlight extends DistributionLibraryActivity {
 		mBackground = (LinearLayout) findViewById(R.id.background);
 		mIcon = (View) findViewById(R.id.icon);
 		mText = (TextView) findViewById(R.id.text);
-
-
+		mSeekBar = (SeekBar) findViewById(R.id.seekBar1);
+		mSeekBar.setMax(65);
+		
 		mBackground.setOnTouchListener(new View.OnTouchListener() {
 
 
@@ -163,6 +170,24 @@ public class Flashlight extends DistributionLibraryActivity {
 
 		});
 
+		mSeekBar.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
+			
+			public void onStopTrackingTouch(SeekBar seekBar) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			public void onStartTrackingTouch(SeekBar seekBar) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			public void onProgressChanged(SeekBar seekBar, int progress,
+					boolean fromUser) {
+				mBrightness.setBrightness((float) (progress * 0.015));
+			//	Toast.makeText(Flashlight.this, ""+progress, Toast.LENGTH_SHORT).show();
+			}
+		});
 
 		PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
 		//mWakeLock = pm.newWakeLock(PowerManager.SCREEN_BRIGHT_WAKE_LOCK
@@ -323,7 +348,11 @@ public class Flashlight extends DistributionLibraryActivity {
 
 		// Add distribution menu items last.
 		mDistribution.onCreateOptionsMenu(menu);
-
+		
+		if(Build.VERSION.SDK_INT > Build.VERSION_CODES.HONEYCOMB){
+			MenuInflater mi = getMenuInflater();
+			mi.inflate(R.menu.menu, menu);
+		}
 		return true;
 	}
 
@@ -342,6 +371,10 @@ public class Flashlight extends DistributionLibraryActivity {
 				return true;
 
 			case MENU_SETTINGS:
+				showSettingsMenu();
+				return true;
+				
+			case R.id.item1:
 				showSettingsMenu();
 				return true;
 		}
