@@ -54,6 +54,6 @@
     </string-array>
     <string name="settings_set_time_summary">Select the rate at which the color changes in random mode</string>
    <string name="settings_set_time_title">Frequency Options</string>
-    <string name="settings_time_dialog_title">Set timeuency</string>
+    <string name="settings_time_dialog_title">Set frequency</string>
     <string name="settings_set_time_default">Eg. 40</string>
 </resources>
