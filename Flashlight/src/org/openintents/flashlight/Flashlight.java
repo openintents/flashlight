@@ -215,7 +215,7 @@ public class Flashlight extends DistributionLibraryActivity {
 
 			public void onProgressChanged(SeekBar seekBar, int progress,
 					boolean fromUser) {
-				mBrightness.setBrightness((float) (progress * 0.015));
+				mBrightness.setBrightness((float) ((progress+1) * 0.015));
 				// Toast.makeText(Flashlight.this, ""+progress,
 				// Toast.LENGTH_SHORT).show();
 			}
