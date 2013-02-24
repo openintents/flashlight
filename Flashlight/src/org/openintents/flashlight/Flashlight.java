@@ -21,7 +21,6 @@ import org.openintents.distribution.DistributionLibraryActivity;
 import org.openintents.distribution.DownloadAppDialog;
 import org.openintents.intents.FlashlightIntents;
 import org.openintents.util.IntentUtils;
-
 import android.app.Dialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -272,10 +271,16 @@ public class Flashlight extends DistributionLibraryActivity {
 			} else if (pref.equals("1")) {
 				mfreq = prefs.getString(FlashlightPrefs.PREF_COLOR_FREQ,
 						FlashlightPrefs.DEFAULT_PREF_COLOR_FREQ);
-				if (!(mfreq.equals("")))
-					intFreq = Integer.parseInt(mfreq);
-				else
-					intFreq = 200;
+				if (!(mfreq.equals(""))){
+					try{
+						intFreq = Integer.parseInt(mfreq);
+					}catch(NumberFormatException e){
+						Toast.makeText(Flashlight.this, "Not a valid number default frequency selected", Toast.LENGTH_SHORT).show();
+						intFreq = 200;
+						SharedPreferences.Editor editor = prefs.edit();
+						editor.putString(FlashlightPrefs.PREF_COLOR_FREQ, FlashlightPrefs.DEFAULT_PREF_COLOR_FREQ);
+						editor.commit();	
+					}
 
 				mHandler.removeCallbacks(mUpdateBackground);
 				mHandler.postDelayed(mUpdateBackground, 1000);
@@ -331,14 +336,14 @@ public class Flashlight extends DistributionLibraryActivity {
 			else
 				fGreen = (fGreen - rnd.nextInt(8));
 
-			SharedPreferences sp = PreferenceManager
-					.getDefaultSharedPreferences(Flashlight.this);
-			mfreq = sp.getString(FlashlightPrefs.PREF_COLOR_FREQ,
-					FlashlightPrefs.DEFAULT_PREF_COLOR_FREQ);
-			if (!(mfreq.equals("")))
-				intFreq = Integer.parseInt(mfreq);
-			else
-				intFreq = 200;
+		//	SharedPreferences sp = PreferenceManager
+		//			.getDefaultSharedPreferences(Flashlight.this);
+		//	mfreq = sp.getString(FlashlightPrefs.PREF_COLOR_FREQ,
+		//			FlashlightPrefs.DEFAULT_PREF_COLOR_FREQ);
+		//	if (!(mfreq.equals("")))
+		//		intFreq = Integer.parseInt(mfreq);
+		//	else
+		//		intFreq = 200;
 
 			// TransitionDrawable transition = (TransitionDrawable)
 			// mBackground.getBackground();
