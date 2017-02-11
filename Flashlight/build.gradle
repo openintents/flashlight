@@ -1,0 +1,24 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        applicationId "org.openintents.flashlight"
+        versionName "1.2"
+        versionCode 10012
+        minSdkVersion 5
+        targetSdkVersion rootProject.ext.targetSdkVersion
+    }
+
+    lintOptions {
+        disable 'MissingTranslation'
+    }
+
+}
+
+dependencies {
+    compile files('libs/hardware09.jar')
+    compile 'com.github.openintents:distribution:1.2'
+}
