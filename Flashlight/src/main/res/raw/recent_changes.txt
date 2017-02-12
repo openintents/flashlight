@@ -1,4 +1,14 @@
 ----------------
+release 1.2.1
+date: 2017-02-13
+- support runtime permissions
+
+----------------
+release: 1.2
+date: 2017-02-11
+- new setting for color randomizer (patch by Abhinav Vishwa)
+
+----------------
 release: 1.1
 date: 2012-01-01
 - new setting to use camera flash (Google Code-in task by Shuhao)
