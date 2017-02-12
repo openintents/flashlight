@@ -12,9 +12,9 @@ public class Widget extends AppWidgetProvider {
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager,
                          int[] appWidgetIds) {
-        // TODO Auto-generated method stub
         super.onUpdate(context, appWidgetManager, appWidgetIds);
-        for (int i = 0; i < appWidgetIds.length; i++) {
+        int length = appWidgetIds.length;
+        for (int i = 0; i < length; i++) {
             int appWidgetId = appWidgetIds[i];
 
             Intent intent = new Intent(context, WidgetService.class);

@@ -20,13 +20,14 @@
     <!-- ***************************
          About information
          *************************** -->
-    <string name="about_copyright">Copyright © 2008-2012 OpenIntents</string>
+    <string name="about_copyright">Copyright © 2008–2017 OpenIntents</string>
     <string name="about_website_url">http://www.openintents.org/en/flashlight</string>
     <string name="about_email">support@openintents.org</string>
 
     <string-array name="about_authors"><!-- Add your name here if you helped out -->
         <item>Peli</item>
         <item>"Ronan 'Zero' Schwarz"</item>
+        <item>Friedger Müffke</item>
         <item>Karl Ostmo</item>
         <item>Shuhao</item>
     </string-array>

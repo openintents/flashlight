@@ -16,9 +16,7 @@
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="org.openintents.flashlight"
-          android:installLocation="auto"
-          android:versionCode="10011"
-          android:versionName="1.1">
+          android:installLocation="auto">
 
     <!--
     History:
@@ -44,8 +42,6 @@
     <!-- required to keep the backlight turned on -->
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
 
-    <!-- required to adjust the brightness -->
-    <uses-permission android:name="android.permission.HARDWARE_TEST"/>
     <uses-permission android:name="android.permission.FLASHLIGHT"/>
     <uses-permission android:name="android.permission.CAMERA"/>
 
@@ -65,7 +61,9 @@
 
     <application
         android:icon="@drawable/ic_launcher_flashlight"
-        android:label="@string/app_name">
+        android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_rules">
+    android:label="@string/app_name">
 
         <!-- aTrackDog metadata -->
         <meta-data

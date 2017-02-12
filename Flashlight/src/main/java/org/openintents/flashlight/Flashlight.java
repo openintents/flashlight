@@ -16,6 +16,7 @@
 
 package org.openintents.flashlight;
 
+import android.Manifest;
 import android.app.Dialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -23,6 +24,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -51,6 +53,7 @@ import org.openintents.distribution.DownloadAppDialog;
 import org.openintents.intents.FlashlightIntents;
 import org.openintents.util.IntentUtils;
 
+import java.lang.ref.WeakReference;
 import java.util.Random;
 
 public class Flashlight extends DistributionLibraryActivity {
@@ -70,6 +73,7 @@ public class Flashlight extends DistributionLibraryActivity {
     private static final int DIALOG_COLORPICKER_DOWNLOAD = 2;
     private static final int DIALOG_DISTRIBUTION_START = 100; // MUST BE LAST
     private static final int HIDE_ICON = 1;
+    private static final int REQUEST_PERMISSION = 1000;
     private static int mTimeout = 5000;
     private static boolean mOldClassAvailable;
     private static boolean mNewClassAvailable;
@@ -78,17 +82,19 @@ public class Flashlight extends DistributionLibraryActivity {
     /* establish whether the "new" class is available to us */
     static {
         try {
-            BrightnessOld.checkAvailable();
-            mOldClassAvailable = true;
-        } catch (Throwable t) {
-            mOldClassAvailable = false;
-        }
-        try {
             BrightnessNew.checkAvailable();
             mNewClassAvailable = true;
         } catch (Throwable t) {
             mNewClassAvailable = false;
+
+            try {
+                BrightnessOld.checkAvailable();
+                mOldClassAvailable = true;
+            } catch (Throwable t2) {
+                mOldClassAvailable = false;
+            }
         }
+
     }
 
     /* establish whether the "new" class is available to us */
@@ -101,17 +107,10 @@ public class Flashlight extends DistributionLibraryActivity {
         }
     }
 
+    Handler mHandler = new FlashlightHandler(this);
     private LinearLayout mBackground;
     private View mIcon;
     private TextView mText;
-    Handler mHandler = new Handler() {
-        @Override
-        public void handleMessage(Message msg) {
-            if (msg.what == HIDE_ICON) {
-                hideIcon();
-            }
-        }
-    };
     private boolean mWait = false;
     private boolean incR = true, incB = true, incG = true;
     private String mfreq;
@@ -150,7 +149,7 @@ public class Flashlight extends DistributionLibraryActivity {
 
     };
     private CameraFlash mCameraFlash;
-    private Runnable mUpdateBackground = new Runnable() {
+    private Runnable mUpdateBackgroundWithRandom = new Runnable() {
         public void run() {
             int color;
             Random rnd = new Random();
@@ -228,45 +227,40 @@ public class Flashlight extends DistributionLibraryActivity {
         mBackground.setOnTouchListener(new View.OnTouchListener() {
 
             public boolean onTouch(View arg0, MotionEvent arg1) {
-                SharedPreferences prefs = PreferenceManager
-                        .getDefaultSharedPreferences(Flashlight.this);
-                if (!(prefs.getString(FlashlightPrefs.PREFKEY_COLOR_OPTIONS,
-                        FlashlightPrefs.DEFAULT_COLOR_OPTIONS)).equals("1")) {
-
-                    if (mUseCameraFlash) {
-                        lightsOnOff();
-                    } else {
-                        if (mIcon.getVisibility() == View.VISIBLE) {
-                            hideIcon();
-                        } else {
-                            showIconForAWhile();
-                        }
-                    }
-                } else {
+                if (isRandomBackground()) {
                     mIcon.setVisibility(View.VISIBLE);
                     mText.setVisibility(View.VISIBLE);
+                } else {
+                    if (mUseCameraFlash) {
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                            if (checkSelfPermission(Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
+                                cameraFlashOnOff();
+                            } else {
+                                requestPermissions(new String[]{Manifest.permission.CAMERA}, REQUEST_PERMISSION);
+                            }
+                        } else {
+                            cameraFlashOnOff();
+                        }
+                    } else {
+                        screenLightsOnOff();
+                    }
                 }
                 return false;
             }
         });
 
         mBackground.setOnLongClickListener(new OnLongClickListener() {
-
             public boolean onLongClick(View v) {
-                SharedPreferences prefs = PreferenceManager
-                        .getDefaultSharedPreferences(Flashlight.this);
-                if ((prefs.getString(FlashlightPrefs.PREFKEY_COLOR_OPTIONS,
-                        FlashlightPrefs.DEFAULT_COLOR_OPTIONS)).equals("1")) {
-                    if (mWait != true) {
-                        mHandler.removeCallbacks(mUpdateBackground);
+                if (isRandomBackground()) {
+                    if (!mWait) {
+                        mHandler.removeCallbacks(mUpdateBackgroundWithRandom);
                         mWait = true;
                     } else {
-                        mHandler.removeCallbacks(mUpdateBackground);
-                        mHandler.postDelayed(mUpdateBackground, 1000);
+                        mHandler.removeCallbacks(mUpdateBackgroundWithRandom);
+                        mHandler.postDelayed(mUpdateBackgroundWithRandom, 1000);
                         mWait = false;
                     }
                 }
-
                 return false;
             }
         });
@@ -314,6 +308,13 @@ public class Flashlight extends DistributionLibraryActivity {
         }
     }
 
+    private boolean isRandomBackground() {
+        SharedPreferences prefs = PreferenceManager
+                .getDefaultSharedPreferences(Flashlight.this);
+        return (prefs.getString(FlashlightPrefs.PREFKEY_COLOR_OPTIONS,
+                FlashlightPrefs.DEFAULT_COLOR_OPTIONS)).equals("1");
+    }
+
     private void resetMainScreen() {
         SharedPreferences prefs = PreferenceManager
                 .getDefaultSharedPreferences(this);
@@ -345,36 +346,52 @@ public class Flashlight extends DistributionLibraryActivity {
                         editor.commit();
                     }
 
-                    mHandler.removeCallbacks(mUpdateBackground);
-                    mHandler.postDelayed(mUpdateBackground, 1000);
+                    mHandler.removeCallbacks(mUpdateBackgroundWithRandom);
+                    mHandler.postDelayed(mUpdateBackgroundWithRandom, 1000);
                 }
             } else if (pref.equals("2")) {
                 mColor = Color.WHITE;
             }
         }
         if (mUseCameraFlash) {
-            mText.setText(R.string.cameralight_info);
+            setTextCameraFlashInstructions();
             showIcon();
         } else {
-            mText.setText(R.string.backlight_info);
+            setTextScreenLightsInstructions();
             showIconForAWhile();
         }
         mBackground.setBackgroundColor(mColor);
 
     }
 
-    private void lightsOnOff() {
+    private void setTextScreenLightsInstructions() {
+        mText.setText(R.string.backlight_info);
+    }
+
+    private void setTextCameraFlashInstructions() {
+        mText.setText(R.string.cameralight_info);
+    }
+
+    private void screenLightsOnOff() {
+        if (mIcon.getVisibility() == View.VISIBLE) {
+            hideIcon();
+        } else {
+            showIconForAWhile();
+        }
+    }
+
+    private void cameraFlashOnOff() {
         if (mCameraFlash != null) {
             if (mCameraFlash.isOff()) {
-                lightsOn();
+                cameraFlashOn();
             } else {
-                lightsOff();
+                cameraFlashOff();
             }
         }
         showIcon();
     }
 
-    private void lightsOn() {
+    private void cameraFlashOn() {
         if (mCameraFlash != null) {
             mCameraFlash.lightsOn();
         }
@@ -382,12 +399,30 @@ public class Flashlight extends DistributionLibraryActivity {
         mText.setText(R.string.cameralight_stop_info);
     }
 
-    private void lightsOff() {
+    private void cameraFlashOff() {
         if (mCameraFlash != null) {
             mCameraFlash.lightsOff();
         }
         Log.v(TAG, "Deactivating Camera Light!");
-        mText.setText(R.string.cameralight_info);
+        setTextCameraFlashInstructions();
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        switch (requestCode) {
+            case REQUEST_PERMISSION:
+                if (grantResults.length > 0) {
+                    if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                        cameraFlashOnOff();
+                    } else {
+                        SharedPreferences prefs = PreferenceManager
+                                .getDefaultSharedPreferences(this);
+                        prefs.edit().putBoolean(FlashlightPrefs.PREFKEY_USE_CAMERA_FLASH, false)
+                                .commit();
+                        resetMainScreen();
+                    }
+                }
+        }
     }
 
     @Override
@@ -407,7 +442,7 @@ public class Flashlight extends DistributionLibraryActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        mHandler.removeCallbacks(mUpdateBackground);
+        mHandler.removeCallbacks(mUpdateBackgroundWithRandom);
         wakeUnlock();
     }
 
@@ -420,14 +455,16 @@ public class Flashlight extends DistributionLibraryActivity {
         registerReceiver(mReceiver, i);
     }
 
-    // ///////////////////////////////////////////////////
-    // Menu
-
     @Override
     protected void onStop() {
-        super.onStop();
-
         unregisterReceiver(mReceiver);
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        mHandler.removeCallbacksAndMessages(null);
+        super.onDestroy();
     }
 
     @Override
@@ -438,16 +475,17 @@ public class Flashlight extends DistributionLibraryActivity {
                 .setIcon(android.R.drawable.ic_menu_manage)
                 .setShortcut('3', 'c');
 
-        menu.add(0, MENU_SETTINGS, 0, R.string.preferences)
-                .setIcon(android.R.drawable.ic_menu_preferences)
-                .setShortcut('4', 'p');
-
-        // Add distribution menu items last.
-        mDistribution.onCreateOptionsMenu(menu);
         if (Build.VERSION.SDK_INT > Build.VERSION_CODES.HONEYCOMB) {
             MenuInflater mi = getMenuInflater();
             mi.inflate(R.menu.menu, menu);
+        } else {
+            menu.add(0, MENU_SETTINGS, 0, R.string.preferences)
+                    .setIcon(android.R.drawable.ic_menu_preferences)
+                    .setShortcut('4', 'p');
         }
+
+        // Add distribution menu items last.
+        mDistribution.onCreateOptionsMenu(menu);
         return true;
     }
 
@@ -466,10 +504,7 @@ public class Flashlight extends DistributionLibraryActivity {
                 return true;
 
             case MENU_SETTINGS:
-                showSettingsMenu();
-                return true;
-
-            case R.id.item1:
+            case R.id.settings:
                 showSettingsMenu();
                 return true;
         }
@@ -528,7 +563,7 @@ public class Flashlight extends DistributionLibraryActivity {
 
     private void wakeUnlock() {
         if (mWakeLockLocked) {
-            lightsOff();
+            cameraFlashOff();
             Log.d(TAG, "WakeLock: unlocking");
             mWakeLock.release();
             mWakeLockLocked = false;
@@ -574,7 +609,7 @@ public class Flashlight extends DistributionLibraryActivity {
                             .getDefaultSharedPreferences(this);
                     Editor edit = prefs.edit();
                     edit.putString("color_options", "0");
-                    edit.apply();
+                    edit.commit();
                     String pref = prefs.getString(
                             FlashlightPrefs.PREFKEY_COLOR_OPTIONS,
                             FlashlightPrefs.DEFAULT_COLOR_OPTIONS);
@@ -620,8 +655,25 @@ public class Flashlight extends DistributionLibraryActivity {
         mHandler.sendMessageDelayed(mHandler.obtainMessage(HIDE_ICON), mTimeout);
     }
 
+    private static final class FlashlightHandler extends Handler {
+        WeakReference<Flashlight> flashlightWeakReference;
+
+        public FlashlightHandler(Flashlight flashlight) {
+            flashlightWeakReference = new WeakReference<Flashlight>(flashlight);
+        }
+
+        @Override
+        public void handleMessage(Message msg) {
+            if (msg.what == HIDE_ICON) {
+                Flashlight flashlight = flashlightWeakReference.get();
+                if (flashlight != null) {
+                    flashlight.hideIcon();
+                }
+            }
+        }
+    }
+
     class FlashlightState {
         int mColor;
     }
-
 }

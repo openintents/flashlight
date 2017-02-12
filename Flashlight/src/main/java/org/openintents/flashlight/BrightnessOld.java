@@ -13,6 +13,7 @@ class BrightnessOld extends Brightness {
      * Not valid value of brightness
      */
     private static final int NOT_VALID = -1;
+    public static final String TAG = "BrightnessOld1_0__1_1";
 
     private static int mUserBrightness = NOT_VALID;
     ;
@@ -49,7 +50,7 @@ class BrightnessOld extends Brightness {
             }
 
 
-            //			boolean res=false;
+            // boolean res=false;
             // set screen brightness
             if (mUserBrightness == NOT_VALID) {
                 mUserBrightness = Settings.System.getInt(mContext.getContentResolver(),
@@ -62,8 +63,6 @@ class BrightnessOld extends Brightness {
 
             // Unset screen brightness
             if (mUserBrightness != NOT_VALID) {
-                //Settings.System.putInt(mContext.getContentResolver(),
-                //		Settings.System.SCREEN_BRIGHTNESS, mUserBrightness);
                 setBrightnessOld(mUserBrightness);
                 mUserBrightness = NOT_VALID;
             }
@@ -71,7 +70,7 @@ class BrightnessOld extends Brightness {
     }
 
     private void setBrightnessOld(int oldSdkValue) {
-        Log.d("BrightnessOld for SDK 1.0,1.1", "brightness set to >" + oldSdkValue);
+        Log.d(TAG, "brightness set to >" + oldSdkValue);
         try {
             IHardwareService hardware = IHardwareService.Stub.asInterface(
                     ServiceManager.getService("hardware"));
@@ -79,7 +78,7 @@ class BrightnessOld extends Brightness {
                 hardware.setScreenBacklight(oldSdkValue);
             }
         } catch (RemoteException doe) {
-            Log.d("BrightnessOld for SDK 1.0,1.1", "failed to call HardwareService");
+            Log.d(TAG, "failed to call HardwareService");
         }
     }
 }

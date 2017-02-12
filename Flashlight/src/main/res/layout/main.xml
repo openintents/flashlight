@@ -22,7 +22,7 @@
               android:orientation="vertical"
     >
 
-    <LinearLayout
+    <View
         android:layout_width="fill_parent"
         android:layout_height="0dip"
         android:layout_weight="1"
@@ -44,7 +44,7 @@
         android:layout_gravity="center"
         />
 
-    <LinearLayout
+    <View
         android:layout_width="fill_parent"
         android:layout_height="0dip"
         android:layout_weight="1"
@@ -55,7 +55,7 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Brightness Setter"/>
+        android:text="@string/brightness_setter"/>
 
     <SeekBar
         android:id="@+id/seekBar1"

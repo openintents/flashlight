@@ -6,19 +6,19 @@ android {
 
     defaultConfig {
         applicationId "org.openintents.flashlight"
-        versionName "1.2"
-        versionCode 10012
+        versionName "1.2.1"
+        versionCode 10013
         minSdkVersion 5
         targetSdkVersion rootProject.ext.targetSdkVersion
     }
 
     lintOptions {
-        disable 'MissingTranslation'
+        disable 'MissingTranslation', 'GoogleAppIndexingWarning'
     }
 
 }
 
 dependencies {
     compile files('libs/hardware09.jar')
-    compile 'com.github.openintents:distribution:1.2'
+    compile 'com.github.openintents:distribution:1.2.1'
 }

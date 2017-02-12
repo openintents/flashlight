@@ -8,6 +8,7 @@
         android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_launcher_flashlight"/>
+        android:src="@drawable/ic_launcher_flashlight"
+        android:contentDescription="@string/cameralight_info"/>
 
 </LinearLayout>
