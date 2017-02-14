@@ -6,8 +6,8 @@ android {
 
     defaultConfig {
         applicationId "org.openintents.flashlight"
-        versionName "1.2.1"
-        versionCode 10013
+        versionName "1.2.3"
+        versionCode 10015
         minSdkVersion 5
         targetSdkVersion rootProject.ext.targetSdkVersion
     }
@@ -20,5 +20,5 @@ android {
 
 dependencies {
     compile files('libs/hardware09.jar')
-    compile 'com.github.openintents:distribution:1.2.1'
+    compile 'com.github.openintents:distribution:1.2.2'
 }

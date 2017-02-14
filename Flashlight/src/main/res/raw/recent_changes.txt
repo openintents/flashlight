@@ -1,4 +1,9 @@
 ----------------
+release 1.2.3
+date: 2017-02-14
+- bug fixes
+
+----------------
 release 1.2.1
 date: 2017-02-13
 - support runtime permissions
@@ -6,7 +11,7 @@ date: 2017-02-13
 ----------------
 release: 1.2
 date: 2017-02-11
-- new setting for color randomizer (patch by Abhinav Vishwa)
+- new settin for color randomizer (patch by Abhinav Vishwa)
 
 ----------------
 release: 1.1
